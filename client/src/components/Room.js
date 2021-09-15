@@ -14,12 +14,12 @@ function Room({room, fromdate, todate}) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     return (
-        <div className='row ' data-aos='zoom-in'>
-            <div className='col-md-5'>
+        <div className='row m-3 p-3 bs'>
+            <div className='col-md-4'>
              <img src={room.imageurls[0]} className='image' alt="BestImage"/>
             </div>
-            <div className='col-md-7'>
-              <h1 style={{paddingLeft:"30%"}}>{room.name}</h1>
+            <div className='col-md-8'>
+              <h1>{room.name}</h1>
               <p>max count: {room.maxcount}</p>
               <p>phno: {room.phonenumber}</p>
               <p>Type : {room.type}</p>

@@ -90,7 +90,7 @@ function Homescreen() {
 
             <div className='row justify-content-center mt-5'>
             {loading ? (<Loader/>): (rooms.map(room => {
-                return <div className='col-md-4 mt-2'>
+                return <div className='col-md-9' data-aos='zoom-in'>
                     <Room room={room} fromdate={fromdate} todate={todate}/>
                 </div>
             }))}

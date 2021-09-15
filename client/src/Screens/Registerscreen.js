@@ -2,6 +2,8 @@ import React, {useState,} from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader'
 import Success from '../components/Success'
+import  './registerscreen.css'
+
 
 const Registerscreen = () => {
     const [name, setName] = useState('')
@@ -43,11 +45,12 @@ const Registerscreen = () => {
         <div>
             {loading && (<Loader />)}
             {success && (<Success message="Registered successfully"/>)}
-            <div className='row justify-content-center mt-5'>
-                <div className='col-md-5'>
-                    <div>
-                        <h1>Register</h1>
-                    <input type='text' className='form-control' placeholder='name'
+         <div className="main-w3layouts wrapper">
+		   <h1>Register</h1>
+		   <div class="main-agileinfo">
+			<div class="agileits-top">
+				
+            <input type='text' className='form-control' placeholder='name'
                      value={name} onChange={(e)=>{setName(e.target.value)}}/>
                     <input type='text' className='form-control' placeholder='email'
                     value={email} onChange={(e)=>{setEmail(e.target.value)}}/>
@@ -55,12 +58,33 @@ const Registerscreen = () => {
                     value={password} onChange={(e)=>setPassword(e.target.value)}/>
                     <input type='text' className='form-control' placeholder='confirm password'
                     value={cpassword} onChange={(e)=>setCpassword(e.target.value)}/>
-                   </div>
+					<div class="wthree-text">
+						
+						<div class="clear"> </div>
+					</div>
                    <button className='btn btn-primary mt-2' onClick={Registerhandler}>Register</button>
-                </div>
+                
+				
+           </div>
+				<p>Already Register? <a href="/login"> Login Now!</a></p>
+			</div>
+		</div>
 
-            </div>
-        </div>
+        <ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+ </div>
+ 
     )
 }
 
