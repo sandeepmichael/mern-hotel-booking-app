@@ -32,6 +32,22 @@ function Room({room, fromdate, todate}) {
                  
                   <button className='btn btn-primary' onClick={handleShow}>View Details</button>
               </div>
+
+
+              <ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+
+
             </div>
 
       <Modal show={show} onHide={handleClose} size='lg'>
