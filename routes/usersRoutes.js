@@ -10,7 +10,7 @@ router.post('/register', async(req, res) => {
      if(user){
          res.status(400).json({message:'user already exists'})
      }
-
+     
      user = new User({
          name,
          email,
@@ -38,19 +38,20 @@ router.post('/login', async (req, res) => {
             }
             res.send(temp)
         } else{
-       
-            res.status(400).json({message:'invalid credentials'})
+              
+        res.status(400).json({error:'invalid credentials'})
         }
 
     } catch (error) {
         console.log(error)
         res.status(500).send()
     }
+  
 })
 
 
 
-router.get('/getusers', async(req, res) => {
+router.get('/getusers',  async(req, res) => {
     try {
         const users = await User.find()
         res.send(users)

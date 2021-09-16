@@ -47,7 +47,8 @@ const Registerscreen = () => {
             {success && (<Success message="Registered successfully"/>)}
          <div className="main-w3layouts wrapper">
 		   <h1>Register</h1>
-		   <div class="main-agileinfo">
+		   
+           <div class="main-agileinfo">
 			<div class="agileits-top">
 				
             <input type='text' className='form-control' placeholder='name'
@@ -64,10 +65,10 @@ const Registerscreen = () => {
 					</div>
                    <button className='btn btn-primary mt-2' onClick={Registerhandler}>Register</button>
                 
-				
-           </div>
+				</div>
+                   
 				<p>Already Register? <a href="/login"> Login Now!</a></p>
-			</div>
+			  </div>
 		</div>
 
         <ul class="colorlib-bubbles">
