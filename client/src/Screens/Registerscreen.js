@@ -2,7 +2,7 @@ import React, {useState,} from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader'
 import Success from '../components/Success'
-import  './registerscreen.css'
+import  '../css/registerscreen.css'
 
 
 const Registerscreen = () => {
