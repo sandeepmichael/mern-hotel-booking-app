@@ -5,7 +5,7 @@ import React, {} from 'react'
 
 
 const Navbar = () => {
-    
+  
     const user = JSON.parse(localStorage.getItem('currentuser'))
 
     const logoutHandler = () => {
@@ -18,6 +18,7 @@ const Navbar = () => {
     //   localStorage.removeItem('currentuser')
      //  window.location.href = '/'
  //Name  }
+
 
 
 
@@ -41,8 +42,6 @@ const Navbar = () => {
     <li><a className="dropdown-item" href="/profile">Profile</a></li>
     <li><a className="dropdown-item" href="/login" onClick={logoutHandler}>Logout</a></li>
 
-    
-            
 
 
   </ul>
@@ -55,7 +54,7 @@ const Navbar = () => {
                     </div>
                 </div>
      
-
+              
                     
                 </>)}
               

@@ -1,14 +1,12 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
 import Room from '../components/Room'
-//import Login from '../components/Google'
+import { GoogleLogout } from 'react-google-login'
 import Loader from '../components/Loader'
 import { DatePicker,} from 'antd';
-import {GoogleLogout} from 'react-google-login'
 import moment from 'moment'
 import 'antd/dist/antd.css'
 const { RangePicker } = DatePicker
-
 
 
 const clientId = "878786950565-kmum1ne551io15kq1ibvlae1to9bj11a.apps.googleusercontent.com";
@@ -79,11 +77,12 @@ function Homescreen() {
      setRooms(temprooms)
    }
 
+ 
    const onSignoutSuccess = () => {
     alert("You have been logged out successfully");
     console.clear();
+   
     window.location.href='/login'
-  
 };
 
 
@@ -99,23 +98,15 @@ function Homescreen() {
               <div className='col-md-3'>
                 <input type='text' className='form-control' placeholder='Search rooms' value={searchkey}
                 onChange={(e) => setSearchkey(e.target.value)} onKeyUp={SearchFilterrooms}/>
-
-           
-
-
-              </div>
-                     <div style={{marginLeft:'40%', paddingBottom:'30'}}>
-                             
+                </div>
+                <div style={{marginLeft:'40%'}}>
                 <GoogleLogout
-                clientId={clientId}
+                    clientId={clientId}
                     buttonText="Sign Out"
                     onLogoutSuccess={onSignoutSuccess}
                 >
                 </GoogleLogout>
-                 </div>
-                        
-
-
+                </div>
 
           </div>
 

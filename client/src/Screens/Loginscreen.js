@@ -46,9 +46,9 @@ const Loginscreen = (props) => {
 
                     </div>
                     <button className='btn btn-primary mt-2' onClick={Loginhandler}>Login</button>
-                    <Login />
+                 
                 </div>
-
+               <Login />
             </div>
 
             <ul class="colorlib-bubbles">
