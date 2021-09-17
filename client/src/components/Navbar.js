@@ -1,6 +1,11 @@
-import React from 'react'
+import React, {} from 'react'
+
+  
+
+
 
 const Navbar = () => {
+    
     const user = JSON.parse(localStorage.getItem('currentuser'))
 
     const logoutHandler = () => {
@@ -16,8 +21,13 @@ const Navbar = () => {
 
 
 
+
     return (
         <div className='App'>
+
+
+
+
             <nav className="navbar navbar-expand-lg">
                 <a className="navbar-brand" href="/">Book.Com</a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,6 +40,11 @@ const Navbar = () => {
   <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
     <li><a className="dropdown-item" href="/profile">Profile</a></li>
     <li><a className="dropdown-item" href="/login" onClick={logoutHandler}>Logout</a></li>
+
+    
+            
+
+
   </ul>
 </div></>) : (<>
                 
@@ -39,6 +54,9 @@ const Navbar = () => {
                         <a className="nav-link" href="/login">Login</a>
                     </div>
                 </div>
+     
+
+                    
                 </>)}
               
             </nav>
