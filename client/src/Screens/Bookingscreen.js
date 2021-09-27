@@ -3,6 +3,7 @@ import axios from 'axios'
 import Loader from '../components/Loader'
 import moment from 'moment'
 import StripeCheckout from 'react-stripe-checkout';
+import Paymentscreen from './Paymentscreen';
 import Swal from 'sweetalert2'
 import AOS from 'aos'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
@@ -66,6 +67,9 @@ const onToken = async(token) => {
 
 }
 
+const razorpayadmin = () => {
+    window.location.href = '/payment'
+}
 
 
 
@@ -96,13 +100,7 @@ const onToken = async(token) => {
                                </div>
                                <div style={{float:'right'}} className='m-2'>
                                  
-                                   <StripeCheckout
-                                   currency='inr'
-                                   amount={totalamount * 100}
-                                   token={onToken}
-                                    stripeKey="pk_test_51JFEwOSAYBgu61o0YcICNpABH2dthEbfCF9NKRhcyxsr87VuntfecBwX8dGvS18A1UGwoADcI72ruKRHXhNZfTNU00rEDZKmhV">
-                                        <button className='btn btn-primary'>Pay Now</button>
-                                    </StripeCheckout>
+                               <button onClick={razorpayadmin} className='btn btn-primary'>Pay</button>
                                </div>
 
                        </div>

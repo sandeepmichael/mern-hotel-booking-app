@@ -9,6 +9,7 @@ import Loginscreen from './Screens/Loginscreen';
 import Profilescreen from './Screens/Profilescreen';
 import Adminscreen from './Screens/Adminscreen';
 import Landingscreen from './Screens/Landingscreen';
+import Paymentscreen from './Screens/Paymentscreen';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
      <Route  path='/profile' component={Profilescreen} />
      <Route  path='/Admin' component={Adminscreen} />
      <Route  path='/' exact component={Landingscreen} />
+     <Route path='/payment' component={Paymentscreen} />
      
      </BrowserRouter>
      

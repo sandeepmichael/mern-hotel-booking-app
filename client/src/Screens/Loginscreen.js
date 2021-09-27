@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import Loader from '../components/Loader'
-import Login from '../components/Google'
+
 
 const Loginscreen = (props) => {
 
@@ -48,7 +48,7 @@ const Loginscreen = (props) => {
                     <button className='btn btn-primary mt-2' onClick={Loginhandler}>Login</button>
                  
                 </div>
-               <Login />
+           
             </div>
 
             <ul class="colorlib-bubbles">

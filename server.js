@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const dotenv = require('dotenv')
 const path = require('path')
+const cors = require('cors')
 
 
 const app = express()
@@ -18,7 +19,10 @@ mongoose.connect("mongodb+srv://sandy_31:sandy@cluster0.dnhmd.mongodb.net/bookin
     console.error(err)
 })
 app.use(express.json())
+app.use(cors())
 
+
+app.use('/payment', require('./payment'))
 
 //
 app.use('/api', require('./routes/roomRoutes'))
